@@ -1,6 +1,10 @@
 // lib/contentful.ts
 import { createClient } from "contentful";
+console.log("Loading Contentful configuration...");
+console.log("CONTENTFUL_SPACE_ID:", process.env.CONTENTFUL_SPACE_ID ? "defined" : "undefined");
+console.log("CONTENTFUL_ACCESS_TOKEN:", process.env.CONTENTFUL_ACCESS_TOKEN ? "defined" : "undefined");
 
+// Validate required environment variables
 if (!process.env.CONTENTFUL_SPACE_ID) {
   throw new Error("CONTENTFUL_SPACE_ID is not defined");
 }

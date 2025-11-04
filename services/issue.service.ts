@@ -85,3 +85,40 @@ export async function getIssueListByIssueId(
     return [];
   }
 }
+
+// Get issue by orderBy field
+export async function getIssueByOrderBy(
+  orderBy: number
+): Promise<IssuesEntry | null> {
+  try {
+    const response = await contentfulClient.getEntries<IssuesSkeleton>({
+      content_type: "issues",
+      "fields.orderBy": orderBy,
+      limit: 1,
+    } as any);
+
+    return (response.items[0] as IssuesEntry) || null;
+  } catch (error) {
+    console.error("Error fetching issue by orderBy:", error);
+    return null;
+  }
+}
+
+// Get issue list items by issueNo field
+export async function getIssueListByIssueNo(
+  issueNo: number
+): Promise<IssueListEntry[]> {
+  try {
+    const response = await contentfulClient.getEntries<IssueListSkeleton>({
+      content_type: "issueList",
+      "fields.issueNo": issueNo,
+      order: ["fields.orderBy"],
+      include: 2,
+    } as any);
+
+    return response.items as IssueListEntry[];
+  } catch (error) {
+    console.error("Error fetching issue list by issueNo:", error);
+    return [];
+  }
+}

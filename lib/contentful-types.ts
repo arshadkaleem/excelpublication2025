@@ -31,12 +31,16 @@ export type BlogPageEntry = Entry<BlogPageSkeleton>;
 export interface IssuesSkeleton extends EntrySkeletonType {
   contentTypeId: "issues";
   fields: {
-    title: string;
-    orderBy: number;
-    volumn: string;
-    monthYear: string;
-    subTitle: Document; // Rich text
-    currentIssue: boolean;
+    title?: string;
+    orderBy?: number;
+    volume?: string;
+    volumn?: string; // Legacy field, keeping for backward compatibility
+    monthYear?: string;
+    date?: string;
+    subtitle?: Document; // Rich text
+    subTitle?: Document; // Legacy field name, keeping for backward compatibility
+    slug?: string;
+    currentIssue?: boolean;
   };
 }
 
