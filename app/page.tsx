@@ -79,7 +79,7 @@ export default function Home() {
                     />
                   </Link>
                   <Link
-                    href="/journals"
+                    href="/current-issue"
                     className="px-8 py-4 border-2 border-white text-white rounded-xl font-bold hover:bg-white/10 backdrop-blur-sm transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <BookOpen size={20} />
@@ -97,18 +97,18 @@ export default function Home() {
                     Call for Papers
                   </Link>
                   <Link
-                    href="/advertisement"
+                    href="/issues"
                     className="group px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
                   >
                     <Newspaper size={16} />
-                    Advertisement
+                    Issues
                   </Link>
                   <Link
-                    href="/managing-editors"
+                    href="/authors"
                     className="group px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
                   >
                     <Users size={16} />
-                    Managing Editors
+                    Authors
                   </Link>
                 </div>
               </div>
