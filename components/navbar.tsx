@@ -34,7 +34,7 @@ export function Navbar() {
     { href: "/publication-ethics", label: "Publication Ethics", icon: Award },
     { href: "/reviewer-guidelines", label: "Reviewer Guidelines", icon: Users },
     { href: "/journals", label: "Journals", icon: BookOpen },
-    { href: "/contact", label: "Contact", icon: null },
+    { href: "/contact", label: "Contact Us", icon: null },
   ];
 
   return (
