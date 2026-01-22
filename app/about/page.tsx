@@ -18,6 +18,7 @@ import {
   Zap,
 } from "lucide-react";
 
+
 export default function About() {
   return (
     <div className="min-h-screen bg-white">
