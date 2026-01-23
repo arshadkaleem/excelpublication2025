@@ -6,6 +6,9 @@ import {
 } from "@/services/issue.service";
 import { IssuesEntry, IssueListEntry } from "@/lib/contentful-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+
+
 import {
   BookOpen,
   Calendar,
@@ -54,9 +57,9 @@ export default async function CurrentIssuePage() {
   const formattedDate =
     date && typeof date === "string"
       ? new Date(date).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "long",
-        })
+        year: "numeric",
+        month: "long",
+      })
       : monthYear || "Date not available";
 
   return (
@@ -148,9 +151,9 @@ export default async function CurrentIssuePage() {
                   const authorNames =
                     author && Array.isArray(author)
                       ? author
-                          .map((a) => a.fields?.name)
-                          .filter(Boolean)
-                          .join(", ")
+                        .map((a) => a.fields?.name)
+                        .filter(Boolean)
+                        .join(", ")
                       : "Unknown Author";
 
                   // Get PDF URL
